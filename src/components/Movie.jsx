@@ -9,7 +9,6 @@ function Movie(props) {
         Poster: poster,
     } = props;
 
-    console.log('movie render');
 
     return (
         <div id={id} className="card movie">
@@ -17,14 +16,14 @@ function Movie(props) {
                 {/*если нету картинки ставим заглушку*/}
                 {poster === "N/A" ? (
                     <img
+                        alt=""
                         className="activator"
                         src={`https://via.placeholder.com/300x400?text=${title}`}
                     />
                 ) : (
-                    <img className="activator" src={poster} />
+                    <img alt="" className="activator" src={poster} />
                 )}
 
-                {/*<img className="activator" src={poster}/>*/}
             </div>
             <div className="card-content">
                     <span className="card-title activator grey-text text-darken-4">
