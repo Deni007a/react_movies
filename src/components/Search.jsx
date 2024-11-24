@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 
 
@@ -6,6 +6,7 @@ function Search(props) {
 
     let [search, setSearch] = useState('');
     let [type, setType] = useState('all');
+   
 
     let handleKey = (event) => {
         if (event.key === "Enter") {
@@ -18,7 +19,7 @@ function Search(props) {
     }
 
     useEffect(() => {
-        props.searchMovies(search, type)
+            props.searchMovies(search, type)
     }, [type]);
 
 
